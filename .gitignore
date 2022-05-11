@@ -127,6 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data/
+data/*
 temp*
 *.csv
+!data/BatteryModel.csv
+!data/SOC-OCV.csv
