@@ -3,7 +3,7 @@ from utils import *
 import matplotlib.pyplot as plt
 from extended_kalman_filter import run_ekf
 
-DATA_FILE = '../data/Turnigy Graphene/0 degC/06-03-19_09.46 825_LA92_0degC_Turnigy_Graphene.mat'
+DATA_FILE = '../data/Turnigy Graphene/25 degC/04-20-19_05.34 780_LA92_25degC_Turnigy_Graphene.mat'
 BATTERY_MODEL = '../data/BatteryModel.csv'
 SOC_OCV = '../data/SOC-OCV.csv'
 
