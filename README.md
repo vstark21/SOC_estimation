@@ -1,6 +1,6 @@
 # SOC_estimation
 
-State of charge estimation using Extended kalman filter and Feedforward neural network. You can find more details in the [presentation]('SOC Estimation.pdf').
+State of charge estimation using Extended kalman filter and Feedforward neural network. You can find more details in the [presentation]("SOC Estimation.pdf").
 
 ## Usage
 
