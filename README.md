@@ -17,7 +17,7 @@ cd EKF
 python main.py
 ```
 
-Running FNN
+**Running FNN**
 
 ```bash
 cd FNN
