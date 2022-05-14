@@ -3,10 +3,6 @@ import pandas as pd
 from scipy.interpolate import interp2d
 from tqdm import tqdm
 
-def scatteredInterpolant(x, y, v):
-    xi, yi = np.meshgrid(x, y)
-
-
 def run_ekf(
     data: pd.DataFrame,
     bat_model: pd.DataFrame,
