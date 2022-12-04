@@ -3,7 +3,7 @@ from utils import *
 import matplotlib.pyplot as plt
 from extended_kalman_filter import run_ekf
 
-DATA_FILE = '../data/Turnigy Graphene/25 degC/04-20-19_05.34 780_LA92_25degC_Turnigy_Graphene.mat'
+DATA_FILE = '../04-20-19_05.34 780_LA92_25degC_Turnigy_Graphene.mat'
 BATTERY_MODEL = '../data/BatteryModel.csv'
 SOC_OCV = '../data/SOC-OCV.csv'
 
@@ -35,6 +35,9 @@ if __name__ == '__main__':
     SOC_Estimated, Vt_Estimated, Vt_Error = run_ekf(
         LiPoly, battery_model, soc_ocv
     )
+
+    percentage_error = np.abs((LiPoly['Measured_SOC'] - SOC_Estimated * 100) / LiPoly['Measured_SOC']) * 100
+    print('Mean percentage error: {:.2f}%'.format(np.mean(percentage_error)))
 
     # Plot the results
     fig, axes = plt.subplots(2, 2)
