@@ -42,8 +42,8 @@ if __name__ == '__main__':
     # Plot the results
     fig, axes = plt.subplots(2, 2)
 
-    axes[0, 0].plot(LiPoly['RecordingTime_Hours'], LiPoly['Measured_Voltage'], label='Measured Voltage')
-    axes[0, 0].plot(LiPoly['RecordingTime_Hours'], Vt_Estimated, label='Estimated Voltage')
+    axes[0, 0].plot(LiPoly['RecordingTime_Hours'], LiPoly['Measured_Voltage'], label='Measured Voltage', alpha=0.5)
+    axes[0, 0].plot(LiPoly['RecordingTime_Hours'], Vt_Estimated, label='Estimated Voltage', alpha=0.5)
     axes[0, 0].set_ylabel('Terminal Voltage [V]')
     axes[0, 0].set_title('Measure vs. Estimated Terminal Voltage (V)')
     axes[0, 0].legend()
@@ -52,11 +52,11 @@ if __name__ == '__main__':
     axes[0, 1].set_ylabel('Terminal Voltage Error')
     axes[0, 1].set_title('Terminal Voltage Error')
 
-    axes[1, 0].plot(LiPoly['RecordingTime_Hours'], LiPoly['Measured_SOC'], label='Coulomb Counting')
-    axes[1, 0].plot(LiPoly['RecordingTime_Hours'], SOC_Estimated * 100., label='Estimated SOC using EKF')
+    axes[1, 0].plot(LiPoly['RecordingTime_Hours'], LiPoly['Measured_SOC'], label='Measured SOC', alpha=0.5)
+    axes[1, 0].plot(LiPoly['RecordingTime_Hours'], SOC_Estimated * 100., label='Estimated SOC using EKF', alpha=0.5)
     axes[1, 0].set_ylabel('SOC [%]')
     axes[1, 0].set_xlabel('Time [Hours]')
-    axes[1, 0].set_title('SOC using Coulomb Counting vs. Estimated SOC using EKF')
+    axes[1, 0].set_title('Measured SOC vs. Estimated SOC using EKF')
     axes[1, 0].legend()
     
     # Plot soc error

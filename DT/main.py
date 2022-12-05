@@ -32,11 +32,11 @@ if __name__ == '__main__':
     # Plot the results
     fig, axes = plt.subplots(1, 2)
 
-    axes[0].plot(LiPoly['RecordingTime_Hours'], LiPoly['Measured_SOC'], label='Coulomb Counting')
-    axes[0].plot(LiPoly['RecordingTime_Hours'], SOC_Estimated, label='Estimated SOC using DT')
+    axes[0].plot(LiPoly['RecordingTime_Hours'], LiPoly['Measured_SOC'], label='Measured SOC', alpha=0.5)
+    axes[0].plot(LiPoly['RecordingTime_Hours'], SOC_Estimated, label='Estimated SOC using DT', alpha=0.5)
     axes[0].set_ylabel('SOC [%]')
     axes[0].set_xlabel('Time [Hours]')
-    axes[0].set_title('SOC using Coulomb Counting vs. Estimated SOC using DT')
+    axes[0].set_title('Measured SOC vs. Estimated SOC using DT')
     axes[0].legend()
     
     # Plot soc error
